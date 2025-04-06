@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional cleaning services for homes and businesses. Eco-friendly products, trained staff, and exceptional results.">
+    <meta name="keywords" content="cleaning service, house cleaning, office cleaning, professional cleaners">
+    <meta name="author" content="CleanMaster Pro">
+    <title>CleanMaster Pro | Professional Cleaning Services</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ensure proper mobile rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="images/lolo.png" alt="JBG Cleaning">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn btn-warning ms-lg-3" id="applyBtn">Apply Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active" style="background-image: url('images/hero1-min.jpg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="container h-100 carousel-content">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12 text-center text-white">
+                                <h1 class="display-3 fw-bold">Professional Cleaning Services</h1>
+                                <p class="lead">Transforming spaces, delivering perfection, Complete home cleaning including living areas, bedrooms, kitchens, and bathrooms with attention to detail</p>
+                                <div class="hero-icons d-flex justify-content-center gap-3 flex-wrap mt-4">
+                                    <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-broom me-2"></i>Our Services</a>
+                                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-phone me-2"></i>Contact Us</a>
+                                    <a href="#testimonials" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-star me-2"></i>Client Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Slide -->
+                <div class="carousel-item" style="background-image: url('images/hero2-min.jpeg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="container h-100 carousel-content">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12 text-center text-white">
+                                <h1 class="display-3 fw-bold">Eco-Friendly Cleaning</h1>
+                                <p class="lead">Safe for your family and the environment</p>
+                                <div class="hero-icons d-flex justify-content-center gap-3 flex-wrap mt-4">
+                                    <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-broom me-2"></i>Our Services</a>
+                                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-phone me-2"></i>Contact Us</a>
+                                    <a href="#testimonials" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-star me-2"></i>Client Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third Slide -->
+                <div class="carousel-item" style="background-image: url('images/hero3-min.jpeg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="container h-100 carousel-content">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12 text-center text-white">
+                                <h1 class="display-3 fw-bold">Commercial Cleaning Experts</h1>
+                                <p class="lead">Keeping your business spotless</p>
+                                <div class="hero-icons d-flex justify-content-center gap-3 flex-wrap mt-4">
+                                    <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-broom me-2"></i>Our Services</a>
+                                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-phone me-2"></i>Contact Us</a>
+                                    <a href="#testimonials" class="btn btn-outline-light btn-lg rounded-pill px-4"><i class="fas fa-star me-2"></i>Client Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/about-min.jpg" alt="Our cleaning team" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Us</h2>
+                    <p class="lead">With over 10 years of experience, CleanMaster Pro delivers exceptional cleaning services using eco-friendly products and state-of-the-art equipment.</p>
+                    <p>Our trained professionals are committed to exceeding your expectations with attention to detail and personalized service. We believe in creating healthy environments that allow you to focus on what matters most.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-check-circle text-primary-cus me-2 mt-1"></i>
+                                <span>Licensed & Insured</span>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-check-circle text-primary-cus me-2 mt-1"></i>
+                                <span>Eco-Friendly Products</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-check-circle text-primary-cus me-2 mt-1"></i>
+                                <span>Background-Checked Staff</span>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <i class="fas fa-check-circle text-primary-cus me-2 mt-1"></i>
+                                <span>100% Satisfaction Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5" style="min-height: 840px; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Services</h2>
+                <p class="lead text-muted">JBG Cleaning Services offers professional cleaning services to make your home or apartment look its very best. From cleaning sinks, baths and tiles to polishing windows, our cleaners have the expertise to deal with every cleaning challenge.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary-cus rounded-circle mx-auto mb-4">
+                                <i class="fas fa-home fa-2x"></i>
+                            </div>
+                            <h4 class="card-title">Domestic Cleaning</h4>
+                            <p class="card-text">We welcome customers with busy lives or who want to return home and feel they are in a five-star hotel. Apart from professional house cleaning service, many of our customers request ironing, laundry, and changing beds.</p>
+                            <ul class="text-start ps-4">
+                                <li>Dusting and polishing</li>
+                                <li>Vacuuming and mopping</li>
+                                <li>Bathroom sanitization</li>
+                                <li>Kitchen deep cleaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary-cus rounded-circle mx-auto mb-4">
+                                <i class="fas fa-home fa-2x"></i>
+                            </div>
+                            <h4 class="card-title">Commercial Cleaning</h4>
+                            <p class="card-text">We welcome customers with busy lives or who want to return home and feel they are in a five-star hotel. Apart from professional house cleaning service, many of our customers request ironing, laundry, and changing beds.</p>
+                            <ul class="text-start ps-4">
+                                <li>Dusting and polishing</li>
+                                <li>Vacuuming and mopping</li>
+                                <li>Bathroom sanitization</li>
+                                <li>Kitchen deep cleaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary-cus rounded-circle mx-auto mb-4">
+                                <i class="fas fa-home fa-2x"></i>
+                            </div>
+                            <h4 class="card-title">Deep Cleaning</h4>
+                            <p class="card-text">We welcome customers with busy lives or who want to return home and feel they are in a five-star hotel. Apart from professional house cleaning service, many of our customers request ironing, laundry, and changing beds.</p>
+                            <ul class="text-start ps-4">
+                                <li>Dusting and polishing</li>
+                                <li>Vacuuming and mopping</li>
+                                <li>Bathroom sanitization</li>
+                                <li>Kitchen deep cleaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more service cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light testimonial-bg" style="background-image: url('images/bg-two.jpg');">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Clients Say</h2>
+                <p class="lead text-muted">Trusted by hundreds of happy customers</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning-cus">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"CleanMaster Pro has been cleaning my home for 2 years and I couldn't be happier. They're reliable, thorough, and always leave my place sparkling!"</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <img src="images/client1-min.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Homeowner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning-cus">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"CleanMaster Pro has been cleaning my home for 2 years and I couldn't be happier. They're reliable, thorough, and always leave my place sparkling!"</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <img src="images/client1-min.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Homeowner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning-cus">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"CleanMaster Pro has been cleaning my home for 2 years and I couldn't be happier. They're reliable, thorough, and always leave my place sparkling!"</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <img src="images/client1-min.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Homeowner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-spacer d-block d-md-none" style="height: 40px;"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="min-height: 850px; display: flex; align-items: center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Contact Us</h2>
+                    <p class="lead">Ready to book a service or have questions? Get in touch!</p>
+                    <div class="mt-4">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-map-marker-alt text-primary-cus me-3 mt-1"></i>
+                            <p>Flat 6, Scotney house Mead place, hackn ey, E9 6SN</p>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone text-primary-cus me-3 mt-1"></i>
+                            <p>+447445252442</p>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope text-primary-cus me-3 mt-1"></i>
+                            <ul class="list-unstyled">
+                                <li>Admin-services@jbgcleaningservices.co.uk</li>
+                                <li>Admin@jbgcleaningservices.co.uk</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="fw-bold mb-3">Business Hours</h5>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                        Saturday: 9:00 AM - 4:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-4">Send Us a Message</h3>
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Service Interested In</label>
+                                    <select class="form-select" id="service">
+                                        <option value="">Select a service</option>
+                                        <option value="residential">Residential Cleaning</option>
+                                        <option value="commercial">Commercial Cleaning</option>
+                                        <option value="deep">Deep Cleaning</option>
+                                        <option value="move">Move In/Out Cleaning</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 py-2">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div class="modal fade" id="applicationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Join Our Team</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="applicationForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="appName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="appName" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="appEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="appEmail" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="appPhone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="appPhone" required>
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="appPosition" class="form-label">Position Applying For</label>
+                                <select class="form-select" id="appPosition" required>
+                                    <option value="">Select position</option>
+                                    <option value="cleaner">Residential Cleaner</option>
+                                    <option value="commercial">Commercial Cleaner</option>
+                                    <option value="supervisor">Cleaning Supervisor</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a position.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appExperience" class="form-label">Relevant Experience</label>
+                            <textarea class="form-control" id="appExperience" rows="3" required></textarea>
+                            <div class="invalid-feedback">Please describe your experience.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appAvailability" class="form-label">Availability</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="weekdays">
+                                <label class="form-check-label" for="weekdays">Weekdays</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="weekends">
+                                <label class="form-check-label" for="weekends">Weekends</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="mornings">
+                                <label class="form-check-label" for="mornings">Mornings</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="afternoons">
+                                <label class="form-check-label" for="afternoons">Afternoons</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appResume" class="form-label">Upload Resume</label>
+                            <input type="file" class="form-control" id="appResume" accept=".pdf,.doc,.docx">
+                            <div class="form-text">PDF, DOC, or DOCX files only (max 5MB)</div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="appAgree" required>
+                            <label class="form-check-label" for="appAgree">I agree to the terms and conditions</label>
+                            <div class="invalid-feedback">You must agree before submitting.</div>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a href="#" class="navbar-brand">
+                        <img src="images/footerlogo.png" alt="JBG Cleaning">
+                    </a>
+                    <p>Professional cleaning services with a commitment to excellence and customer satisfaction.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Residential</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Commercial</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Deep Cleaning</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Move In/Out</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white text-decoration-none">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-uppercase mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for cleaning tips and special offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-warning" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                    <p><i class="fas fa-envelope me-2"></i>Admin-services@jbgcleaningservices.co.uk</p>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 JBG Cleaning Services All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

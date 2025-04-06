@@ -1,0 +1,355 @@
+/* styles.css */
+:root {
+    --primary-color: #05172f; 
+    --secondary-color: #aa9260; 
+    --white: #ffffff;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjust for mobile navbar */
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    padding: 10px 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--dark);
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--primary-color);
+}
+
+/* Change navbar button background */
+.navbar .btn-warning,
+button.btn-warning {
+    background-color: var(--secondary-color); /* Your blue color */
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+/* Hover state */
+.navbar .btn-warning:hover,
+button.btn-warning:hover {
+    background-color: var(--white); /* Darker blue */
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* Active/focus states */
+.navbar .btn-warning:focus,
+.navbar .btn-warning:active,
+button.btn-warning:focus,
+button.btn-warning:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 0 0 0.25rem rgba(191, 221, 251, 0.5);
+}
+
+/* Logo styling */
+.navbar-brand {
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Logo hover effect */
+.navbar-brand:hover img {
+  opacity: 0.9;
+}
+
+/* Navbar Responsiveness */
+.navbar-brand img {
+    height: 80px; /* Default size */
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+    
+    #navbarNav {
+        padding: 15px 0;
+        background: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-nav {
+        margin-bottom: 10px;
+    }
+    
+    #applyBtn {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-content {
+  position: relative;
+  z-index: 100;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+    }
+    
+    .carousel-content h1 {
+        font-size: 2rem !important;
+        margin-top: 20px;
+    }
+    
+    .carousel-content .lead {
+        font-size: 1rem;
+    }
+    
+    .hero-icons .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+}
+
+/* About Section */
+.about img {
+    transition: transform 0.3s ease;
+}
+
+.about img:hover {
+    transform: scale(1.02);
+}
+
+.text-primary-cus,
+.text-warning-cus{
+    color: var(--secondary-color) !important;
+}
+
+/* Services Section */
+.services-bg {
+    min-height: 820px; /* Your desired desktop height */
+    display: flex;
+    align-items: center;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Services Section Responsiveness */
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .service-card ul {
+        padding-left: 1rem;
+    }
+}
+
+/* Testimonials */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Add this to ensure cards stay properly contained */
+.testimonial-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Testimonials Section Fix */
+.testimonial-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  min-height: 0; /* Reset any fixed height */
+}
+
+/* Desktop height */
+@media (min-width: 992px) {
+  .testimonial-bg {
+    min-height: 800px; /* Your desired desktop height */
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Mobile height */
+@media (max-width: 991px) {
+  .testimonial-bg {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
+
+/* Add this to create space between sections */
+@media (max-width: 768px) {
+    #testimonials {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+    
+    #contact {
+        padding-top: 40px !important;
+    }
+    
+    .testimonial-bg {
+        padding: 60px 0;
+    }
+    
+    /* Ensure cards don't overlap */
+    .testimonial-card {
+        margin-bottom: 30px;
+    }
+}
+
+#testimonials {
+    position: relative;
+    z-index: 2;
+}
+
+#contact {
+    position: relative;
+    z-index: 3;
+}
+
+/* Contact Form */
+.contact-form .form-control, .contact-form .form-select {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Contact Section Responsiveness */
+@media (max-width: 992px) {
+    #contact .col-lg-6:first-child {
+        margin-bottom: 30px;
+    }
+}
+
+/* Footer */
+footer.bg-dark{
+    background-color: var(--primary-color) !important;
+}
+.footer a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Footer Responsiveness */
+@media (max-width: 768px) {
+    footer .col-lg-4, 
+    footer .col-lg-2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    footer .text-md-start, 
+    footer .text-md-end {
+        text-align: center !important;
+    }
+    
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
