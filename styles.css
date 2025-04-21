@@ -159,7 +159,8 @@ button.btn-warning:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(170, 146, 96, 0.3); /* Gold with 30% opacity */
+    mix-blend-mode: multiply;
 }
 
 .carousel-content {
@@ -244,18 +245,23 @@ button.btn-warning:active {
 }
 
 /* Testimonials */
-.testimonial-card {
+#testimonial-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-10px);
+#testimonial-card img {
+   border: 3px solid #aa9260; /* Your gold color */
+   object-fit: cover;
 }
 
 /* Add this to ensure cards stay properly contained */
-.testimonial-container {
-  position: relative;
-  z-index: 2;
+
+#testi-text,
+.testi-text{
+    color: var(--white) !important;
 }
 
 /* Testimonials Section Fix */
@@ -264,7 +270,20 @@ button.btn-warning:active {
   background-position: center;
   background-repeat: no-repeat;
   padding: 80px 0;
-  min-height: 0; /* Reset any fixed height */
+  min-height: 0;
+  position: relative; /* Required for overlay positioning */
+  isolation: isolate; /* Creates new stacking context */
+}
+
+.testimonial-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1; /* Places behind content */
 }
 
 /* Desktop height */
@@ -303,16 +322,6 @@ button.btn-warning:active {
     .testimonial-card {
         margin-bottom: 30px;
     }
-}
-
-#testimonials {
-    position: relative;
-    z-index: 2;
-}
-
-#contact {
-    position: relative;
-    z-index: 3;
 }
 
 /* Contact Form */
