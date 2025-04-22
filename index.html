@@ -311,8 +311,8 @@
                         <div class="d-flex mb-3">
                             <i class="fas fa-envelope text-primary-cus me-3 mt-1"></i>
                             <ul class="list-unstyled">
-                                <li>Admin-services@jbgcleaningservices.co.uk</li>
-                                <li>Admin@jbgcleaningservices.co.uk</li>
+                                <li>admin-services@jbgcleaningservices.co.uk</li>
+                                <li>admin@jbkcleaningservices.com</li>
                             </ul>
                         </div>
                     </div>
@@ -327,24 +327,31 @@
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-4">Send Us a Message</h3>
-                            <form id="contactForm" novalidate>
+                            <form  action="https://formspree.io/f/xanowpdn" method="POST" id="contactForm"class="needs-validation" novalidate> <!-- Disables browser default validation -->
+                                    <input type="hidden" name="_next" value="/thank-you.html?form=contact">
+                                    <input type="hidden" name="_subject" value="New Cleaning Service Inquiry">
+                                    <input type="hidden" name="_replyto" value=""> <!-- JS will populate this -->
+
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <input type="text" class="form-control" id="name" autocomplete="off" required>
                                     <div class="invalid-feedback">Please enter your name.</div>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" autocomplete="off" required>
                                     <div class="invalid-feedback">Please enter a valid email.</div>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="phone">
+                                    <input type="tel" class="form-control" id="phone" autocomplete="off" required>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="service" class="form-label">Service Interested In</label>
-                                    <select class="form-select" id="service">
+                                    <select class="form-select" id="service" required>
                                         <option value="">Select a service</option>
                                         <option value="residential">Residential Cleaning</option>
                                         <option value="commercial">Commercial Cleaning</option>
@@ -352,12 +359,23 @@
                                         <option value="move">Move In/Out Cleaning</option>
                                     </select>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <textarea class="form-control" id="message" rows="3" required></textarea>
                                     <div class="invalid-feedback">Please enter your message.</div>
                                 </div>
-                                <button type="submit" class="btn btn-warning w-100 py-2">Send Message</button>
+
+                                 <!-- Spam honeypot -->
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <button type="submit" class="btn btn-warning w-100 py-2">
+                                    <span class="submit-text">Send Message</span>
+                                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                </button>
+
+                                <!-- Success/Error Messages -->
+                                <div id="formMessage" class="mt-3 alert d-none"></div>
                             </form>
                         </div>
                     </div>
@@ -374,26 +392,36 @@
                     <h5 class="modal-title">Join Our Team</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
-                    <form id="applicationForm" novalidate>
+                    <form id="applicationForm" action="https://formspree.io/f/mnndaodo"  method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <!-- Hidden Formspree Fields -->
+                          <input type="hidden" name="_next" value="/thank-you.html?form=application">
+                        <input type="hidden" name="_subject" value="New Job Application - JBG Cleaning Services">
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="text" name="_gotcha" style="display:none"> <!-- Honeypot -->
+
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="appName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="appName" required>
+                                <input type="text" class="form-control" id="appName" autocomplete="off" required>
                                 <div class="invalid-feedback">Please enter your full name.</div>
                             </div>
+
                             <div class="col-md-6 mb-3">
                                 <label for="appEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="appEmail" required>
+                                <input type="email" class="form-control" id="appEmail" autocomplete="off" required>
                                 <div class="invalid-feedback">Please enter a valid email.</div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="appPhone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="appPhone" required>
+                                <input type="tel" class="form-control" id="appPhone" autocomplete="off" required>
                                 <div class="invalid-feedback">Please enter your phone number.</div>
                             </div>
+
                             <div class="col-md-6 mb-3">
                                 <label for="appPosition" class="form-label">Position Applying For</label>
                                 <select class="form-select" id="appPosition" required>
@@ -403,39 +431,70 @@
                                     <option value="supervisor">Cleaning Supervisor</option>
                                     <option value="other">Other</option>
                                 </select>
+
                                 <div class="invalid-feedback">Please select a position.</div>
                             </div>
                         </div>
+
                         <div class="mb-3">
                             <label for="appExperience" class="form-label">Relevant Experience</label>
                             <textarea class="form-control" id="appExperience" rows="3" required></textarea>
                             <div class="invalid-feedback">Please describe your experience.</div>
                         </div>
+
                         <div class="mb-3">
-                            <label for="appAvailability" class="form-label">Availability</label>
+                            <p class="lead">Availability</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="weekdays">
+                                <input class="form-check-input" type="checkbox" id="weekdays" name="availability[]" value="weekdays">
                                 <label class="form-check-label" for="weekdays">Weekdays</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="weekends">
+                                <input class="form-check-input" type="checkbox" id="weekends" name="availability[]" value="weekends">
                                 <label class="form-check-label" for="weekends">Weekends</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="mornings">
+                                <input class="form-check-input" type="checkbox" id="mornings" name="availability[]" value="mornings">
                                 <label class="form-check-label" for="mornings">Mornings</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="afternoons">
+                                <input class="form-check-input" type="checkbox" id="afternoons" name="availability[]" value="afternoons">
                                 <label class="form-check-label" for="afternoons">Afternoons</label>
                             </div>
                         </div>
+                        <!-- Resume Upload -->
                         <div class="mb-3">
-                            <label for="appResume" class="form-label">Upload Resume</label>
-                            <input type="file" class="form-control" id="appResume" accept=".pdf,.doc,.docx">
-                            <div class="form-text">PDF, DOC, or DOCX files only (max 5MB)</div>
+                          <label for="resume" class="form-label">Upload Resume*</label>
+                          <input type="file" class="form-control" id="resume" name="Resume" accept=".pdf,.doc,.docx" required data-max-size="5242880">
+                          <div class="form-text">PDF, DOC, or DOCX (Max 5MB)</div>
+
+                          <div id="fileError" class="invalid-feedback d-none">
+                            File exceeds 5MB limit. Please compress it or use a smaller file.
+                          </div>
+                          <div id="fileTypeError" class="invalid-feedback d-none">
+                            Only PDF, DOC, and DOCX files are allowed.
+                          </div>
                         </div>
-                        <button type="submit" class="btn btn-warning w-100">Submit Application</button>
+
+                        <button type="submit" class="btn btn-warning w-100">
+                            <span class="submit-text">Submit Application</span>
+                            <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                        </button>
+
+                        <!-- Status Message -->
+                        <div id="applicationMessage" class="mt-3 alert d-none"></div>
+
+                        <noscript>
+                          <style>
+                            .file-input-wrapper { display: none; }
+                            .no-js-warning {
+                              display: block !important;
+                              color: #dc3545;
+                            }
+                          </style>
+                          <p class="no-js-warning d-none">
+                            JavaScript is required for file uploads. Max size: 5MB.
+                          </p>
+                        </noscript>
                     </form>
                 </div>
             </div>
@@ -479,13 +538,36 @@
                 <div class="col-lg-4">
                     <h5 class="text-uppercase mb-4">Newsletter</h5>
                     <p>Subscribe to our newsletter for cleaning tips and special offers.</p>
-                    <form class="mb-3">
+                    
+                    <form class="mb-3 needs-validation" id="newsletterForm" action="https://formspree.io/f/xpwdaobw" method="POST" novalidate>
+                        <!-- Formspree Special Fields -->
+                        <input type="hidden" name="_next" value="/thank-you.html?form=newsletter">
+                        <input type="hidden" name="_subject" value="New Newsletter Subscriber">
+                        <input type="hidden" name="_replyto" id="replyToField" value="">
+                        <input type="text" name="_gotcha" style="display:none"> <!-- Honeypot -->
+
+                        <!-- Email Input -->
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Your email">
-                            <button class="btn btn-warning" type="button">Subscribe</button>
+                            <label for="newsletterEmail" class="visually-hidden">Email Address</label>
+                            <input type="email" class="form-control" id="newsletterEmail" name="email" 
+                                autocomplete="off" placeholder="Your email address" required>
+                            <div id="emailError" class="invalid-feedback" style="display: none;">
+                            Please enter a valid email
+                            </div>
                         </div>
+
+                        <!-- Submit Button -->
+                        <button class="btn btn-warning mt-2" type="submit" id="newsletterSubmit">
+                            <span class="submit-text">Subscribe</span>
+                            <span class="spinner-border spinner-border-sm d-none" aria-hidden="true"></span>
+                        </button>
+
+                        <!-- Messages -->
+                        <div id="formSuccess" class="alert alert-success mt-2 d-none"></div>
+                        <div id="newsletterMessage" class="alert alert-danger mt-2 d-none"></div>
                     </form>
-                    <p><i class="fas fa-envelope me-2"></i>Admin-services@jbgcleaningservices.co.uk</p>
+                    
+                    <p><i class="fas fa-envelope me-2"></i>admin@jbkcleaningservices.com</p>
                 </div>
             </div>
             <hr class="my-4 bg-light">
