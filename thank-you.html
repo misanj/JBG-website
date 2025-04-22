@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .thank-you-container {
+      max-width: 800px;
+      margin: 5rem auto;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      background: white;
+    }
+    
+    .thank-you-icon {
+      font-size: 5rem;
+      color: #aa9260;
+      margin-bottom: 1.5rem;
+    }
+    
+    .thank-you-message {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .action-buttons {
+      margin-top: 2rem;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .form-specific-content {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    /* Change navbar button background */
+    .btn-primary {
+        background-color: #aa9260 !important; /* Your blue color */
+        border-color: #aa9260;
+        color: white;
+        width: 10em;
+    }
+
+    /* Hover state */
+    .btn-primary:hover {
+        background-color: white !important;/* Darker blue */
+        border-color: #aa9260;
+        color: #aa9260;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="thank-you-container">
+      <div class="thank-you-icon">✓</div>
+      <h1>Thank You!</h1>
+      
+      <div class="thank-you-message" id="dynamicMessage">
+        Your submission has been received successfully.
+      </div>
+      
+      <div class="form-specific-content" id="formSpecificContent">
+        <!-- Dynamic content will be inserted here -->
+      </div>
+      
+      <div class="action-buttons">
+        <a href="https://www.jbgcleaningservices.co.uk/#home" class="btn btn-primary">Return Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get the form type from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const formType = urlParams.get('form');
+    
+    // Customize content based on form type
+    const dynamicMessage = document.getElementById('dynamicMessage');
+    const formSpecificContent = document.getElementById('formSpecificContent');
+    
+    switch(formType) {
+      case 'contact':
+        dynamicMessage.textContent = 'Thank you for contacting us!';
+        formSpecificContent.innerHTML = `
+          <h3>What's Next?</h3>
+          <p>Our team will review your message and get back to you within 2 business days.</p>
+          <p>For urgent inquiries, please call us at (123) 456-7890.</p>
+        `;
+        break;
+        
+      case 'application':
+        dynamicMessage.textContent = 'Your application has been submitted!';
+        formSpecificContent.innerHTML = `
+          <h3>Application Process</h3>
+          <p>We've received your application materials and will review them carefully.</p>
+          <p>If your qualifications match our needs, we'll contact you to schedule an interview.</p>
+          <p class="mt-3"><strong>Reference ID:</strong> ${Math.floor(100000 + Math.random() * 900000)}</p>
+        `;
+        break;
+        
+      case 'newsletter':
+        dynamicMessage.textContent = 'Thanks for subscribing!';
+        formSpecificContent.innerHTML = `
+          <h3>Welcome to Our Community</h3>
+          <p>You'll receive our next newsletter in your inbox.</p>
+          <p>Check your email for a confirmation message (may take a few minutes).</p>
+          <div class="alert alert-info mt-3">
+            Can't find our email? Please check your spam folder.
+          </div>
+        `;
+        break;
+        
+      default:
+        dynamicMessage.textContent = 'Your submission has been received successfully.';
+        formSpecificContent.innerHTML = `
+          <p>We appreciate you taking the time to connect with us.</p>
+        `;
+    }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
