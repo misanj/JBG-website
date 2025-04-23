@@ -80,51 +80,55 @@
   </div>
 
   <script>
-    // Get the form type from URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const formType = urlParams.get('form');
-    
-    // Customize content based on form type
-    const dynamicMessage = document.getElementById('dynamicMessage');
-    const formSpecificContent = document.getElementById('formSpecificContent');
-    
-    switch(formType) {
-      case 'contact':
-        dynamicMessage.textContent = 'Thank you for contacting us!';
-        formSpecificContent.innerHTML = `
+    // Get URL parameters and page elements
+    const params = new URLSearchParams(window.location.search);
+    const formType = params.get('form')?.toLowerCase(); // Ensure lowercase
+    const messageEl = document.getElementById('dynamicMessage');
+    const contentEl = document.getElementById('formSpecificContent');
+
+    // Content templates for each form type
+    const formTemplates = {
+      contact: {
+        message: 'Thank you for contacting us!',
+        content: `
           <h3>What's Next?</h3>
           <p>Our team will review your message and get back to you within 2 business days.</p>
           <p>For urgent inquiries, please call us at (123) 456-7890.</p>
-        `;
-        break;
-        
-      case 'application':
-        dynamicMessage.textContent = 'Your application has been submitted!';
-        formSpecificContent.innerHTML = `
+        `
+      },
+      application: {
+        message: 'Your application has been submitted!',
+        content: `
           <h3>Application Process</h3>
           <p>We've received your application materials and will review them carefully.</p>
           <p>If your qualifications match our needs, we'll contact you to schedule an interview.</p>
           <p class="mt-3"><strong>Reference ID:</strong> ${Math.floor(100000 + Math.random() * 900000)}</p>
-        `;
-        break;
-        
-      case 'newsletter':
-        dynamicMessage.textContent = 'Thanks for subscribing!';
-        formSpecificContent.innerHTML = `
+        `
+      },
+      newsletter: {
+        message: 'Thanks for subscribing!',
+        content: `
           <h3>Welcome to Our Community</h3>
           <p>You'll receive our next newsletter in your inbox.</p>
           <p>Check your email for a confirmation message (may take a few minutes).</p>
           <div class="alert alert-info mt-3">
             Can't find our email? Please check your spam folder.
           </div>
-        `;
-        break;
-        
-      default:
-        dynamicMessage.textContent = 'Your submission has been received successfully.';
-        formSpecificContent.innerHTML = `
-          <p>We appreciate you taking the time to connect with us.</p>
-        `;
+        `
+      },
+      default: {
+        message: 'Your submission has been received successfully.',
+        content: '<p>We appreciate you taking the time to connect with us.</p>'
+      }
+    };
+
+    // Set the appropriate content
+    if (messageEl && contentEl) {
+      const template = formTemplates[formType] || formTemplates.default;
+      messageEl.textContent = template.message;
+      contentEl.innerHTML = template.content;
+    } else {
+      console.error('Required page elements not found');
     }
   </script>
   
